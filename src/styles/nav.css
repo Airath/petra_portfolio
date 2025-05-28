@@ -2,6 +2,7 @@
     display: flex;
     justify-content:space-around;
     border: red 1px solid;
+    align-items: end;
 }
 
 .menu-items a{
@@ -39,7 +40,7 @@ nav ul a{
     font-family: "Gochi Hand", cursive;
     font-weight: 400;
     text-transform: uppercase;
-    margin-left: 5.5rem;
+    margin-left: 10rem;
 }
 
 .prof{
@@ -50,4 +51,5 @@ nav ul a{
 
 .nevjegy{
     margin-bottom: -1.5rem;
+    margin-left: 25rem;
 }

@@ -15,7 +15,15 @@ body{
     background: #FFFFFF;
     padding: 3rem;
     border: red 1px solid;
-    margin: 5rem 2rem;
+    top: 10rem;
+    bottom: 50rem;
     width: 1360px;
     margin: 0 auto;
+    position: relative;
+}
+
+.cica{
+    position: absolute;
+    top: -130px;
+    left: 5rem;
 }
