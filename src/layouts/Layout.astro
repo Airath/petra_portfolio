@@ -2,7 +2,6 @@
 import Nav from "../components/Nav.astro";
 import "../styles/global.css";
 import { Image } from "astro:assets";
-import cica from "../assets/cica.svg";
 ---
 
 <!doctype html>
@@ -23,7 +22,7 @@ import cica from "../assets/cica.svg";
   <body>
     <Nav />
     <div class="content">
-      <Image src={cica} alt="" class="cica" />
+      <img class="cica" src="/public/cica.svg" alt="cica kép" />
       <slot />
     </div>
   </body>
