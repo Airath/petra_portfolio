@@ -2,7 +2,6 @@
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 import magnify from "../assets/magnify.svg";
-import { Image } from "astro:assets";
 
 const images = [
   {
@@ -80,31 +79,24 @@ const images = [
   }
 </style>
 
-<div class="pswp-gallery" id="my-gallery">
+<div class="pswp-gallery gallery" id="my-gallery">
   {
-    images.map((image) => (
-      <div class="img-container">
-        <Image
-          loading={"eager"}
-          class="magnify"
-          src={magnify}
-          alt="Kurby egy késsel"
-        />
-        <a
-          href={image.src}
-          data-pswp-width={image.width}
-          data-pswp-height={image.height}
-          target="_blank"
-        >
-          <img src={image.thumb} alt="Galéria kép" />
-          <div class="overlay" />
-        </a>
-      </div>
+    images.map((img) => (
+      <a
+        href={img.src}
+        data-pswp-width={img.width}
+        data-pswp-height={img.height}
+        class="img-container"
+      >
+        <img src={img.thumb} alt="Galéria kép" class="thumb" />
+        <div class="overlay" />
+        <img src={magnify.src} alt="Nagyító ikon" class="magnify" width="40" />
+      </a>
     ))
   }
 </div>
 
-<script type="module">
+<script>
   import PhotoSwipeLightbox from "photoswipe/lightbox";
   import "photoswipe/style.css";
 
