@@ -1,7 +1,7 @@
 ---
-import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 import magnify from "../assets/magnify.svg";
+import PhotoSwipeInit from "../components/PhotoSwipe.jsx";
 
 const images = [
   {
@@ -96,15 +96,4 @@ const images = [
   }
 </div>
 
-<script>
-  import PhotoSwipeLightbox from "photoswipe/lightbox";
-  import "photoswipe/style.css";
-
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: "#my-gallery",
-    children: "a",
-    pswpModule: () => import("photoswipe"),
-  });
-
-  lightbox.init();
-</script>
+<PhotoSwipeInit client:load />
