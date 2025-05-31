@@ -1,6 +1,8 @@
 ---
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
+import magnify from "../assets/magnify.svg";
+import { Image } from "astro:assets";
 
 const images = [
   {
@@ -63,12 +65,31 @@ const images = [
   .img-container:hover .overlay {
     opacity: 50%;
   }
+
+  .magnify {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* valódi középre helyezés */
+    opacity: 0;
+  }
+
+  .img-container:hover .magnify {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
 </style>
 
 <div class="pswp-gallery" id="my-gallery">
   {
     images.map((image) => (
       <div class="img-container">
+        <Image
+          loading={"eager"}
+          class="magnify"
+          src={magnify}
+          alt="Kurby egy késsel"
+        />
         <a
           href={image.src}
           data-pswp-width={image.width}
