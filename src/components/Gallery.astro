@@ -1,6 +1,6 @@
 ---
 import "photoswipe/style.css";
-import magnify from "../assets/magnify.svg";
+import magnify3 from "../assets/magnify3.svg";
 import PhotoSwipeInit from "../components/PhotoSwipe.jsx";
 
 const images = [
@@ -34,10 +34,10 @@ const images = [
     display: inline-block;
     margin: 6px;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 36px;
   }
 
-  .img-container img {
+  .img-container .thumb {
     display: block;
     max-width: 100%;
     height: auto;
@@ -90,7 +90,7 @@ const images = [
       >
         <img src={img.thumb} alt="Galéria kép" class="thumb" />
         <div class="overlay" />
-        <img src={magnify.src} alt="Nagyító ikon" class="magnify" width="40" />
+        <img src={magnify3.src} alt="Nagyító ikon" class="magnify" width="40" />
       </a>
     ))
   }
