@@ -1,17 +1,32 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.scrolled{
+    background-color: #FFFFFF;
+    height: 10rem;
+}
+
 .menu{
     display: flex;
     justify-content:space-around;
-    border: red 1px solid;
     align-items: end;
+    margin-bottom: -8.4rem;
+    z-index: 10;
 }
 
 .menu-items a{
     color: #FFFFFF;
     background-color: #58a154;
     border-radius: 14px;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     font-size: 16.18px;
     text-transform: uppercase;
+    width: 10rem;
+    display: inline-block;
+    text-align: center;
 }
 
 .menu-items a:hover{
@@ -32,6 +47,7 @@ nav ul a{
     font-size: 58.29px;
     text-transform: uppercase;
     color: #8F4075;
+    margin-left: 24rem;
 }
 
 .vezeteknev{
@@ -40,16 +56,36 @@ nav ul a{
     font-family: "Gochi Hand", cursive;
     font-weight: 400;
     text-transform: uppercase;
-    margin-left: 10rem;
+    margin-left: 30rem;
 }
 
 .prof{
     color: #336330;
     font-weight: 700;
     letter-spacing: 5%;
+    margin-left: 24rem;
 }
 
 .nevjegy{
     margin-bottom: -1.5rem;
-    margin-left: 25rem;
+}
+
+/* .cica{
+    position: absolute;
+    top: -130px;
+    left: 5rem;
+    z-index: 2;
+}
+
+.cica_farka{
+    position: absolute;
+    top: -5rem;
+    left: 4%;
+    z-index: 0;
+} */
+
+.cica2{
+    position: absolute;
+    left: 20%;
+    bottom: -40%;
 }

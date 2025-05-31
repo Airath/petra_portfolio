@@ -1,9 +1,24 @@
 ---
 import "../styles/nav.css";
+import { Image } from "astro:assets";
+import cica_figma from "../assets/cica_figma.png";
+import cica_farok from "../assets/cica_farok.png";
 ---
 
-<header>
+<header class="header">
   <div class="menu">
+    <Image
+      loading={"eager"}
+      class="cica2"
+      src={cica_figma}
+      alt="Cica az oldal tetején ül"
+    />
+    <Image
+      loading={"eager"}
+      class="cica_farka"
+      src={cica_farok}
+      alt="A cica farka"
+    />
     <div>
       <h1 class="keresztnev nevjegy">Petra</h1>
       <h1 class="vezeteknev nevjegy">Harhály</h1><br />
@@ -11,10 +26,27 @@ import "../styles/nav.css";
     </div>
     <nav>
       <ul>
-        <li class="menu-items"><a href="/Home">Home</a></li>
-        <li class="menu-items"><a href="/Portfolio">Portfolió</a></li>
-        <li class="menu-items"><a href="/Contact">Contact</a></li>
+        <li class="menu-items"><a href="/petra_portfolio/Home">Home</a></li>
+        <li class="menu-items">
+          <a href="/petra_portfolio/Portfolio">Portfolió</a>
+        </li>
+        <li class="menu-items">
+          <a href="/petra_portfolio/Contact">Elérhetőség</a>
+        </li>
       </ul>
     </nav>
   </div>
 </header>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header");
+    if (!header) return;
+
+    if (window.scrollY > 1) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
