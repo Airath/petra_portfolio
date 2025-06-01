@@ -15,6 +15,7 @@ header{
     align-items: end;
     margin-bottom: -8.4rem;
     z-index: 10;
+    width: 120rem;
 }
 
 .menu-items a{
